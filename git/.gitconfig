@@ -1,3 +1,5 @@
 [user]
 	email = takuyahirata4@gmail.com
 	name = Takuya Hirata
+[core]
+	excludesfile = /Users/thirata/.gitignore
