@@ -218,7 +218,7 @@ nnoremap <leader>gc <cmd>Git commit<cr>
 nnoremap <leader>ut :UndotreeToggle<CR>
 " format file
 nnoremap <leader>ff ggVG=<C-o>
-" yank to the clipboard
+
 " Clear search register
 nnoremap <leader>cs :let @/ = ""<CR>
 " easy replace

@@ -115,6 +115,7 @@ alias ghv="gh repo view --web"
 # Create dev environment
 alias dev-npm="zsh ~/.dotfiles/.shell-scripts/dev-npm.sh"
 alias dev-test="zsh ~/.dotfiles/.shell-scripts/dev-test.sh"
+alias open="zsh ~/.dotfiles/.shell-scripts/tmux-sessionizer.sh"
 
 export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib"
