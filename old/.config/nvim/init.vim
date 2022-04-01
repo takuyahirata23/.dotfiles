@@ -84,17 +84,6 @@ EOF
 EOF
 
 
-
-"enable treesitter 
-:lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained",
-  highlight = {
-    enable = true,             
-  },
-}
-EOF
-
 set completeopt=menuone,noinsert,noselect 
 "let g:completion_matching_strategy_list=['exact', 'substring', 'fuzzy']
 "
