@@ -13,3 +13,12 @@ require('packer').startup(function()
   use 'cocopon/iceberg.vim'
   use 'haishanh/night-owl.vim'
 end)	
+
+
+-- treesitter 
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained",
+  highlight = {
+    enable = true,             
+  },
+}

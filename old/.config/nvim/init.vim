@@ -1,15 +1,7 @@
-set tabstop=2 softtabstop=2
-set shiftwidth=2
-set expandtab
-set smartindent
-set relativenumber
 set nu
 set hlsearch " Highligh search results
-set title " Show the filename in the window titlebar
 set noerrorbells
-set smartindent
 set smartcase
-set hidden
 set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
@@ -21,7 +13,6 @@ set cmdheight=1
 set colorcolumn=80
 set completeopt=menuone,noselect
 set nocompatible " wikivim
-set nospell
 
 call plug#begin('~/.vim/plugged')
 Plug 'neovim/nvim-lspconfig'
@@ -61,13 +52,6 @@ Plug 'kamykn/spelunker.vim'
 Plug 'vimwiki/vimwiki'
 call plug#end()
 
-
-set termguicolors
-
- """"" enable the theme
-syntax enable
-"colorscheme gruvbox 
-colorscheme night-owl 
 
 filetype plugin on " wikivim
 
@@ -204,14 +188,6 @@ augroup plugin_initialize
     autocmd VimEnter * call FckThatMatchParen()
 augroup END
 
-let mapleader = " " 
-" General key bingings
-" Write file
-nnoremap <leader>w :w<cr> 
-nnoremap <leader>q :q<cr> 
-nnoremap <leader>ex :Ex<cr> 
-nnoremap <leader>V :Vex<cr> 
-nnoremap <leader>S :Sex<cr> 
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <C-p> <cmd>Telescope git_files<cr>
 nnoremap <leader>lb <cmd>Telescope buffers<cr>
@@ -219,19 +195,12 @@ nnoremap <leader>lg <cmd>Telescope live_grep<cr>
 " nnoremap gd <cmd>lua vim.lsp.buf.definition()<cr> 
 nnoremap gd <cmd> lua require('telescope.builtin').lsp_definitions()<cr> 
 nnoremap ca <cmd> lua require('telescope.builtin').lsp_code_actions()<cr> 
-nnoremap <leader>gs <cmd>G<cr>
-nnoremap <leader>gc <cmd>Git commit<cr>
 nnoremap <leader>ut :UndotreeToggle<CR>
 " format file
 nnoremap <leader>ff ggVG=<C-o>
 
-" Clear search register
-nnoremap <leader>cs :let @/ = ""<CR>
 " easy replace
 vnoremap <leader>p "_dp
-vnoremap D "_d
-" yank to the clipboard
-vnoremap <leader>cy "+y
 
 " yank the rest of line
 nnoremap Y y$

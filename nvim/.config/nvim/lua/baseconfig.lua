@@ -3,6 +3,11 @@ vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.opt.relativenumber = true
+vim.opt.smartindent = true
+vim.opt.hidden = true
+
+-- Show filename in the window titlebar
+vim.opt.title = true 
 
 -- Enables 24-bit RGB. This most likely enable theme
 vim.opt.termguicolors = true
