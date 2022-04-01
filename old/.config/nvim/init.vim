@@ -75,6 +75,10 @@ filetype plugin on " wikivim
   require'lspconfig'.tsserver.setup{}
 EOF
 
+:lua << EOF
+  require'lspconfig'.gopls.setup{}
+EOF
+
 " :lua << EOF
 "   require'lspconfig'.tsserver.setup{on_attach=require'completion'.on_attach}
 " EOF
@@ -109,7 +113,8 @@ EOF
 
 set completeopt=menuone,noinsert,noselect 
 "let g:completion_matching_strategy_list=['exact', 'substring', 'fuzzy']
-lua <<EOF
+"
+:lua <<EOF
   local cmp = require'cmp'
 
   cmp.setup({
@@ -157,6 +162,7 @@ lua <<EOF
   require('lspconfig')['elixirls'].setup {
     cmd = { "/Users/takuya/elixir-ls/release/language_server.sh" },
   }
+  require('lspconfig')['gopls'].setup {}
 EOF
 
 " autocmd BufWritePre * Neoformat
@@ -238,22 +244,6 @@ nnoremap J mzJ`z
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 
-
-
-" enable transparent background
-" hi SignColumn ctermbg=NONE guibg=NONE
-" hi LineNr ctermbg=NONE guibg=NONE
-" hi Normal guibg=NONE ctermbg=NONE
-" hi NonText ctermbg=NONE guibg=NONE
-" hi StatusLine ctermbg=NONE guibg=NONE
-" hi EndOfBuffer ctermbg=NONE guibg=NONE
-"
-" " Spellcheck style
-" highlight SpellBad ctermbg=Red ctermfg=White
-" highlight SpellCap cterm=NONE ctermbg=NONE
-" highlight SpellRare cterm=NONE ctermbg=NONE
-" highlight SpellLocal cterm=NONE ctermbg=NONE
-
 " hapoon 
 nnoremap <leader>lh :lua require("harpoon.ui").toggle_quick_menu()<CR>
 nnoremap <leader>ah :lua require("harpoon.mark").add_file()<CR>
@@ -264,3 +254,6 @@ nnoremap <leader>cp <cmd>Octo pr checkout<cr>
 nnoremap <leader>sr <cmd>Octo review start<cr>
 nnoremap <leader>er <cmd>Octo review submit<cr>
 
+" Go 
+autocmd FileType go setlocal tabstop=4 softtabstop=4
+autocmd FileType go setlocal shiftwidth=4
