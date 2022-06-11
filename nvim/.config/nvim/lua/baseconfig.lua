@@ -5,6 +5,8 @@ vim.opt.softtabstop = 2
 vim.opt.relativenumber = true
 vim.opt.smartindent = true
 vim.opt.hidden = true
+vim.opt.smartcase = true
+vim.opt.incsearch = true
 
 -- Show filename in the window titlebar
 vim.opt.title = true 
@@ -14,5 +16,6 @@ vim.opt.termguicolors = true
 
 vim.cmd [[
   syntax enable
-  colorscheme iceberg 
+  colorscheme night-owl
 ]]
+

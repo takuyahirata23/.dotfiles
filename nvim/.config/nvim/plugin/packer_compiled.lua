@@ -69,15 +69,30 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["auto-pairs"] = {
+    loaded = true,
+    path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/auto-pairs",
+    url = "https://github.com/jiangmiao/auto-pairs"
+  },
   ["iceberg.vim"] = {
     loaded = true,
     path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/iceberg.vim",
     url = "https://github.com/cocopon/iceberg.vim"
   },
+  neoformat = {
+    loaded = true,
+    path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/neoformat",
+    url = "https://github.com/sbdchd/neoformat"
+  },
   ["night-owl.vim"] = {
     loaded = true,
     path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/night-owl.vim",
     url = "https://github.com/haishanh/night-owl.vim"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -89,10 +104,30 @@ _G.packer_plugins = {
     path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   }
 }
 

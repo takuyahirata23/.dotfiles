@@ -6,6 +6,8 @@ keymap('n', '<Leader>q', ':q<CR>', opts)
 keymap('n', '<Leader>V', ':Vex<CR>', opts)
 keymap('n', '<Leader>S', ':Sex<CR>', opts)
 keymap('n', '<Leader>ex', ':Ex<CR>', opts)
+
+-- Clear searh highlight
 keymap('n', '<Leader>cs', ':let @/ = ""<CR>', opts)
 
 --Yank to clipboard
@@ -17,6 +19,13 @@ keymap('v', 'D', '\"_d', opts)
 --Git
 keymap('n', '<Leader>gs', '<CMD>G<CR>', opts)
 keymap('n', '<Leader>gc', '<CMD>Git commit<CR>', opts)
+
+-- Telescope
+keymap('n', '<C-p>', "<CMD>lua require'telescope.builtin'.find_files()<CR>", opts)
+keymap('n', '<Leader>lg', "<CMD>lua require'telescope.builtin'.live_grep()<CR>", opts)
+keymap('n', 'gd', "<CMD>lua require'telescope.builtin'.lsp_definitions()<CR>", opts)
+keymap('n', 'ca', "<CMD>lua require'telescope.builtin'.lsp_code_actions()<CR>", opts)
+
 
 
 

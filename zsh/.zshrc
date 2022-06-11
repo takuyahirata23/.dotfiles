@@ -70,7 +70,7 @@ export ZSH="/Users/takuyahirata/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(git zsh-autosuggestions asdf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -116,6 +116,7 @@ alias ghv="gh repo view --web"
 alias dev-npm="zsh ~/.dotfiles/.shell-scripts/dev-npm.sh"
 alias dev-test="zsh ~/.dotfiles/.shell-scripts/dev-test.sh"
 alias open="zsh ~/.dotfiles/.shell-scripts/tmux-sessionizer.sh"
+alias config="nvim ~/.dotfiles"
 
 export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib"
@@ -135,3 +136,10 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+
+eval "$(direnv hook zsh)"
+
+# use asdf
+#echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
+export PATH=~/.asdf/shims:$PATH
