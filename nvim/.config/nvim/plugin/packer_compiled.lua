@@ -94,10 +94,10 @@ _G.packer_plugins = {
     path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
-  ["iceberg.vim"] = {
+  ["emmet-vim"] = {
     loaded = true,
-    path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/iceberg.vim",
-    url = "https://github.com/cocopon/iceberg.vim"
+    path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/emmet-vim",
+    url = "https://github.com/mattn/emmet-vim"
   },
   neoformat = {
     loaded = true,

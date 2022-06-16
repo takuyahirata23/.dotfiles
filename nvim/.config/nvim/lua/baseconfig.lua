@@ -5,9 +5,18 @@ vim.opt.softtabstop = 2
 vim.opt.relativenumber = true
 vim.opt.smartindent = true
 vim.opt.hidden = true
-vim.opt.spell = true
+vim.opt.spell = false
 vim.opt.smartcase = true
 vim.opt.incsearch = true
+
+-- secure places for gutter so error indicators don't break layout
+vim.opt.signcolumn = "yes"
+
+vim.opt.scrolloff = 8
+vim.opt.cmdheight = 1
+
+-- disable parens highlight
+vim.g.loaded_matchparen = 1
 
 --cmp requires this
 vim.o.completeopt = "menuone,noselect"
@@ -26,3 +35,8 @@ vim.cmd [[
   colorscheme night-owl
 ]]
 
+vim.cmd [[
+  autocmd BufWritePre * Neoformat
+]]
+
+vim.g.user_emmet_leader_key="<Tab>"

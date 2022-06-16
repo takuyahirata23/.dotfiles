@@ -18,7 +18,7 @@ require('packer').startup(function()
   use 'machakann/vim-highlightedyank'
 
   -- Themes
-  use 'cocopon/iceberg.vim'
+  -- use 'cocopon/iceberg.vim'
   use 'haishanh/night-owl.vim'
   
   -- Git
@@ -48,11 +48,16 @@ require('packer').startup(function()
     'sbdchd/neoformat'
   }
 
+  use 'mattn/emmet-vim'
+
 
   -- Telescope
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { {'nvim-lua/plenary.nvim'} },
+    defaults = {
+      file_ignore_patterns = { "node_modules, *.lock, /public, /lib, /dist" }
+    }
   }
 
 end)	
