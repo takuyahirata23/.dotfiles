@@ -49,6 +49,9 @@ require('packer').startup(function()
   }
 
   use 'mattn/emmet-vim'
+  
+  -- Hlper for heex syntax highlight
+  use 'sheerun/vim-polyglot'
 
 
   -- Telescope
@@ -62,6 +65,17 @@ require('packer').startup(function()
 
 end)	
 
+-- Setup lspconfig.
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+-- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+require('lspconfig')['tsserver'].setup {
+  capabilities = capabilities
+}
+
+require('lspconfig')['elixirls'].setup {
+  capabilities = capabilities,
+  cmd = { "/Users/takuyahirata/elixir-ls/language_server.sh" };
+}
 
 require'nvim-treesitter.configs'.setup {
   ensure_installed = { "javascript", "typescript", "elixir" }, 
@@ -73,21 +87,6 @@ require'nvim-treesitter.configs'.setup {
   }
 }
 
-require'lspconfig'.tsserver.setup {}
 
-require'lspconfig'.elixirls.setup{
-    cmd = { "/Users/takuyahirata/elixir-ls/language_server.sh" };
-}
-
--- Setup lspconfig.
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require('lspconfig')['tsserver'].setup {
-  capabilities = capabilities
-}
-
-require('lspconfig')['elixirls'].setup {
-  capabilities = capabilities
-}
 
 

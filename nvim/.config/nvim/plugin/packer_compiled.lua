@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/vim-highlightedyank",
     url = "https://github.com/machakann/vim-highlightedyank"
   },
+  ["vim-polyglot"] = {
+    loaded = true,
+    path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/vim-polyglot",
+    url = "https://github.com/sheerun/vim-polyglot"
+  },
   ["vim-surround"] = {
     loaded = true,
     path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/vim-surround",
