@@ -6,7 +6,6 @@ log/*.log
 .log/
 build/
 dist/
-lib/
 node_modules/
 coverage/
 private/
