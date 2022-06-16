@@ -27,6 +27,9 @@ keymap('n', 'gd', "<CMD>lua require'telescope.builtin'.lsp_definitions()<CR>", o
 keymap('n', 'ca', "<CMD>lua require'telescope.builtin'.lsp_code_actions()<CR>", opts)
 keymap('n', 'gb', "<CMD>lua require'telescope.builtin'.git_branches()<CR>", opts)
 
+-- Format with Neoformat
+keymap('n', 'nn', "<CMD>Neoformat<CR>", opts)
+
 
 --cmp
 local cmp = require'cmp'
