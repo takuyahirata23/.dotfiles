@@ -128,5 +128,4 @@ export KERL_CONFIGURE_OPTIONS="--with-ssl=/opt/homebrew/opt/openssl@1.1 --withou
 eval "$(direnv hook zsh)"
 
 # use asdf
-#echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
 export PATH=~/.asdf/shims:$PATH

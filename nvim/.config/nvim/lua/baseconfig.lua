@@ -7,6 +7,8 @@ vim.opt.smartindent = true
 vim.opt.hidden = true
 vim.opt.smartcase = true
 vim.opt.incsearch = true
+--cmp requires this
+vim.o.completeopt = "menuone,noselect"
 
 -- Show filename in the window titlebar
 vim.opt.title = true 

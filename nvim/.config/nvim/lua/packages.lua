@@ -3,6 +3,14 @@ require('packer').startup(function()
   use 'neovim/nvim-lspconfig'
   use 'nvim-lua/plenary.nvim'
 
+  -- Cmp
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+  -- Cmp
+
   -- Themes
   use 'cocopon/iceberg.vim'
   use 'haishanh/night-owl.vim'
@@ -40,6 +48,7 @@ require('packer').startup(function()
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+
 end)	
 
 
@@ -58,4 +67,16 @@ require'lspconfig'.tsserver.setup {}
 require'lspconfig'.elixirls.setup{
     cmd = { "/Users/takuyahirata/elixir-ls/language_server.sh" };
 }
+
+-- Setup lspconfig.
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+-- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+require('lspconfig')['tsserver'].setup {
+  capabilities = capabilities
+}
+
+require('lspconfig')['elixirls'].setup {
+  capabilities = capabilities
+}
+
 
