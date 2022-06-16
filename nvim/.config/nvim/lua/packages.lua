@@ -10,6 +10,9 @@ require('packer').startup(function()
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
   -- Cmp
+
+  -- Spell checker
+  use 'kamykn/spelunker.vim'
   
   -- Highlight on yank
   use 'machakann/vim-highlightedyank'

@@ -5,8 +5,10 @@ vim.opt.softtabstop = 2
 vim.opt.relativenumber = true
 vim.opt.smartindent = true
 vim.opt.hidden = true
+vim.opt.spell = true
 vim.opt.smartcase = true
 vim.opt.incsearch = true
+
 --cmp requires this
 vim.o.completeopt = "menuone,noselect"
 
@@ -16,7 +18,7 @@ vim.opt.title = true
 -- Enables 24-bit RGB. This most likely enable theme
 vim.opt.termguicolors = true
 
--- Highlit a line yanked for 100 ms
+-- Highlight a line yanked for 100 ms
 vim.g.highlightedyank_highlight_duration = 100
 
 vim.cmd [[
