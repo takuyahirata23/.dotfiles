@@ -16,6 +16,9 @@ vim.opt.title = true
 -- Enables 24-bit RGB. This most likely enable theme
 vim.opt.termguicolors = true
 
+-- Highlit a line yanked for 100 ms
+vim.g.highlightedyank_highlight_duration = 100
+
 vim.cmd [[
   syntax enable
   colorscheme night-owl
