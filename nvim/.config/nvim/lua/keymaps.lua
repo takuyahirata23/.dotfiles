@@ -23,6 +23,7 @@ keymap('n', '<Leader>gc', '<CMD>Git commit<CR>', opts)
 -- Telescope
 keymap('n', '<C-p>', "<CMD>lua require'telescope.builtin'.find_files()<CR>", opts)
 keymap('n', '<C-g>', "<CMD>lua require'telescope.builtin'.live_grep()<CR>", opts)
+keymap('n', 'lf', "<CMD>lua require'telescope.builtin'.buffers()<CR>", opts)
 keymap('n', 'gd', "<CMD>lua require'telescope.builtin'.lsp_definitions()<CR>", opts)
 keymap('n', 'ca', "<CMD>lua require'telescope.builtin'.lsp_code_actions()<CR>", opts)
 keymap('n', 'gb', "<CMD>lua require'telescope.builtin'.git_branches()<CR>", opts)
