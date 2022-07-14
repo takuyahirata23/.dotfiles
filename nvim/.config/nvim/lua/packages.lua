@@ -13,6 +13,9 @@ require('packer').startup(function()
 
   -- Spell checker
   use 'kamykn/spelunker.vim'
+
+  -- Harpoon
+  use 'ThePrimeagen/harpoon'
   
   -- Highlight on yank
   use 'machakann/vim-highlightedyank'

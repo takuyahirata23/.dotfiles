@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/emmet-vim",
     url = "https://github.com/mattn/emmet-vim"
   },
+  harpoon = {
+    loaded = true,
+    path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
   neoformat = {
     loaded = true,
     path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/neoformat",

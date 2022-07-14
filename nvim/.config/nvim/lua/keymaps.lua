@@ -28,6 +28,10 @@ keymap('n', 'gd', "<CMD>lua require'telescope.builtin'.lsp_definitions()<CR>", o
 keymap('n', 'ca', "<CMD>lua require'telescope.builtin'.lsp_code_actions()<CR>", opts)
 keymap('n', 'gb', "<CMD>lua require'telescope.builtin'.git_branches()<CR>", opts)
 
+-- Harpoon
+keymap('n', 'ah', "<CMD>lua require'harpoon.mark'.add_file()<CR>", opts)
+keymap('n', 'lh', "<CMD>lua require'harpoon.ui'.toggle_quick_menu()<CR>", opts)
+
 -- Format with Neoformat
 keymap('n', 'nn', "<CMD>Neoformat<CR>", opts)
 
