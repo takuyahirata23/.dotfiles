@@ -129,3 +129,7 @@ eval "$(direnv hook zsh)"
 
 # use asdf
 export PATH=~/.asdf/shims:$PATH
+
+# gigalixir
+echo "export PATH=\$PATH:$(python3 -m site --user-base)/bin" >> ~/.profile
+source ~/.profile

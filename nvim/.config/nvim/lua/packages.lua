@@ -75,19 +75,23 @@ require('lspconfig')['tsserver'].setup {
   capabilities = capabilities
 }
 
+require'lspconfig'.tailwindcss.setup{
+  capabilities = capabilities
+}
+
 require('lspconfig')['elixirls'].setup {
   capabilities = capabilities,
   cmd = { "/Users/takuyahirata/elixir-ls/language_server.sh" };
 }
 
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "javascript", "typescript", "elixir" }, 
+  ensure_installed = { "javascript", "typescript", "elixir", "heex", "tsx" }, 
   highlight = {
     enable = true,             
-  },
-  indent = {
-    enable = true
   }
+  -- indent = {
+  --   enable = true
+  -- }
 }
 
 
