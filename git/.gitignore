@@ -5,6 +5,9 @@
 log/*.log
 .log/
 build/
+dist/
 node_modules/
 coverage/
+private/
+data/
 
