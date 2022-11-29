@@ -1,7 +1,13 @@
-require('packer').startup(function()
+-- This file can be loaded by calling `lua require('plugins')` from your init.vim
+
+-- Only required if you have packer configured as `opt`
+vim.cmd [[packadd packer.nvim]]
+
+return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'neovim/nvim-lspconfig'
   use 'nvim-lua/plenary.nvim'
+  use 'nvim-lua/popup.nvim'
 
   -- Cmp
   use 'hrsh7th/cmp-nvim-lsp'
@@ -55,45 +61,20 @@ require('packer').startup(function()
   
   -- Hlper for heex syntax highlight
   use 'sheerun/vim-polyglot'
-
-
   -- Telescope
+  -- use {
+  --   'nvim-telescope/telescope.nvim',
+  --   requires = { {'nvim-lua/plenary.nvim'} },
+  --   defaults = {
+  --     file_ignore_patterns = { "node_modules, *.lock, /public, /lib, /dist" }
+  --   }
+  -- }
   use {
-    'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} },
+    'nvim-telescope/telescope.nvim', 
+    tag = '0.1.0',
     defaults = {
       file_ignore_patterns = { "node_modules, *.lock, /public, /lib, /dist" }
     }
   }
 
-end)	
-
--- Setup lspconfig.
-local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require('lspconfig')['tsserver'].setup {
-  capabilities = capabilities
-}
-
-require'lspconfig'.tailwindcss.setup{
-  capabilities = capabilities
-}
-
-require('lspconfig')['elixirls'].setup {
-  capabilities = capabilities,
-  cmd = { "/Users/takuyahirata/elixir-ls/language_server.sh" };
-}
-
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "javascript", "typescript", "elixir", "heex", "tsx" }, 
-  highlight = {
-    enable = true,             
-  }
-  -- indent = {
-  --   enable = true
-  -- }
-}
-
-
-
-
+end)
