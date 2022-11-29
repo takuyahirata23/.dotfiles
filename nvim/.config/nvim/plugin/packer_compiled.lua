@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
+  },
   ["spelunker.vim"] = {
     loaded = true,
     path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/spelunker.vim",

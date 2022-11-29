@@ -30,13 +30,6 @@ vim.opt.termguicolors = true
 -- Highlight a line yanked for 100 ms
 vim.g.highlightedyank_highlight_duration = 100
 
-vim.cmd [[
-  syntax enable
-  colorscheme night-owl
-]]
-
-vim.cmd [[
-  autocmd BufWritePre * Neoformat
-]]
+vim.g.mapleader = " "
 
 vim.g.user_emmet_leader_key="<Tab>"
