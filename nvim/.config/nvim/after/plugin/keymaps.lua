@@ -33,6 +33,8 @@ keymap('n', '<C-g>', "<CMD>lua require'telescope.builtin'.live_grep()<CR>", opts
 keymap('n', 'lf', "<CMD>lua require'telescope.builtin'.buffers()<CR>", opts)
 keymap('n', 'gd', "<CMD>lua require'telescope.builtin'.lsp_definitions()<CR>", opts)
 keymap('n', 'ca', "<CMD>lua require'telescope.builtin'.lsp_code_actions()<CR>", opts)
+-- Show diagnostic
+keymap('n', 'sd', "<CMD>lua vim.diagnostic.open_float()<CR>", opts)
 keymap('n', 'gb', "<CMD>lua require'telescope.builtin'.git_branches()<CR>", opts)
 
 -- Harpoon
