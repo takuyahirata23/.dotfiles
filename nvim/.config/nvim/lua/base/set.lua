@@ -8,6 +8,9 @@ vim.opt.hidden = true
 vim.opt.spell = false
 vim.opt.smartcase = true
 vim.opt.incsearch = true
+vim.opt.termguicolors = true
+
+vim.opt.scrolloff = 8
 
 -- secure places for gutter so error indicators don't break layout
 vim.opt.signcolumn = "yes"

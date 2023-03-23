@@ -7,6 +7,13 @@ keymap('n', '<Leader>V', ':Vex<CR>', opts)
 keymap('n', '<Leader>S', ':Sex<CR>', opts)
 keymap('n', '<Leader>ex', ':Ex<CR>', opts)
 
+
+-- Stay in the middle when jump with <C-d> and <C-u>
+keymap('n', '<C-d>', '<C-d>zz', opts)
+keymap('n', '<C-u>', '<C-u>zz', opts)
+keymap('n', 'n', 'nzzzv', opts)
+keymap('n', 'N', 'Nzzzv', opts)
+
 -- Clear searh highlight
 keymap('n', '<Leader>cs', ':let @/ = ""<CR>', opts)
 

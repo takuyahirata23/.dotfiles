@@ -39,8 +39,9 @@ return require('packer').startup(function(use)
    }
   
   -- Automatically close brackets
-  use {
-    'jiangmiao/auto-pairs'
+   use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
   }
 
   -- Enable "gs" to comment 
