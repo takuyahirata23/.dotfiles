@@ -5,17 +5,32 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  use 'neovim/nvim-lspconfig'
+
+ use {
+  'VonHeikemen/lsp-zero.nvim',
+  branch = 'v2.x',
+  requires = {
+    -- LSP Support
+    {'neovim/nvim-lspconfig'},             -- Required
+    {                                      -- Optional
+      'williamboman/mason.nvim',
+      run = function()
+        pcall(vim.cmd, 'MasonUpdate')
+      end,
+    },
+    {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+    -- Autocompletion
+    {'hrsh7th/nvim-cmp'},     -- Required
+    {'hrsh7th/cmp-nvim-lsp'}, -- Required
+    {'L3MON4D3/LuaSnip'},     -- Required
+  }
+}
+
+
+
   use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/popup.nvim'
-
-  -- Cmp
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/nvim-cmp'
-  -- Cmp
 
   -- Spell checker
   use 'kamykn/spelunker.vim'
@@ -33,10 +48,10 @@ return require('packer').startup(function(use)
   -- Git
   use 'tpope/vim-fugitive'
 
-   use {
-     'nvim-treesitter/nvim-treesitter',
-     run = ':TSUpdate'
-   }
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
   
   -- Automatically close brackets
    use {
@@ -62,19 +77,12 @@ return require('packer').startup(function(use)
   
   -- Hlper for heex syntax highlight
   use 'sheerun/vim-polyglot'
-  -- Telescope
-  -- use {
-  --   'nvim-telescope/telescope.nvim',
-  --   requires = { {'nvim-lua/plenary.nvim'} },
-  --   defaults = {
-  --     file_ignore_patterns = { "node_modules, *.lock, /public, /lib, /dist" }
-  --   }
-  -- }
+
   use {
     'nvim-telescope/telescope.nvim', 
     tag = '0.1.0',
     defaults = {
-      file_ignore_patterns = { "node_modules, *.lock, /public, /lib, /dist" }
+      file_ignore_patterns = { "node_modules, *.lock, /public, /dist" }
     }
   }
 
