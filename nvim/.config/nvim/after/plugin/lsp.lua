@@ -1,25 +1,27 @@
--- Setup lspconfig.
-local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require('lspconfig')['tsserver'].setup {
-  capabilities = capabilities
-}
+local lsp = require('lsp-zero').preset({})
 
-require'lspconfig'.tailwindcss.setup{
-  capabilities = capabilities
-}
+lsp.on_attach(function(client, bufnr)
+  lsp.default_keymaps({buffer = bufnr})
+end)
 
-require('lspconfig')['elixirls'].setup {
-  capabilities = capabilities,
-  cmd = { "/Users/takuyahirata/elixir-ls/language_server.sh" };
-}
+lsp.ensure_installed({
+  -- Replace these with whatever servers you want to install
+  'tsserver',
+  'eslint',
+  'rust_analyzer',
+  'elixirls',
+  'tailwindcss'
+})
 
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "javascript", "typescript", "elixir", "heex", "tsx" }, 
-  highlight = {
-    enable = true,             
+-- (Optional) Configure lua language server for neovim
+--require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+
+lsp.setup()
+
+local cmp = require('cmp')
+
+cmp.setup({
+  mapping = {
+    ['<CR>'] = cmp.mapping.confirm({select = false}),
   }
-  -- indent = {
-  --   enable = true
-  -- }
-}
+})
