@@ -18,6 +18,9 @@ lsp.ensure_installed({
 
 lsp.setup()
 
+-- Hover to show info
+vim.keymap.set('n', 'Y', vim.lsp.buf.hover, {})
+
 local cmp = require('cmp')
 
 cmp.setup({
