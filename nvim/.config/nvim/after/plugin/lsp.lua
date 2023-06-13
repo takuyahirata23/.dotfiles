@@ -20,6 +20,7 @@ lsp.setup()
 
 -- Hover to show info
 vim.keymap.set('n', 'Y', vim.lsp.buf.hover, {})
+vim.keymap.set('n', 'sa', vim.lsp.buf.code_action, {})
 
 local cmp = require('cmp')
 
