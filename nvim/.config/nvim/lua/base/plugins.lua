@@ -75,6 +75,8 @@ return require('packer').startup(function(use)
 
   use 'mattn/emmet-vim'
   
+  use 'mbbill/undotree'
+  
   -- Hlper for heex syntax highlight
   use 'sheerun/vim-polyglot'
 
@@ -85,5 +87,6 @@ return require('packer').startup(function(use)
       file_ignore_patterns = { "node_modules, *.lock, /public, /dist" }
     }
   }
+
 
 end)

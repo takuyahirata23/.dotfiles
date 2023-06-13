@@ -165,6 +165,11 @@ _G.packer_plugins = {
     path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  undotree = {
+    loaded = true,
+    path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/undotree",
+    url = "https://github.com/mbbill/undotree"
+  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/Users/takuyahirata/.local/share/nvim/site/pack/packer/start/vim-commentary",

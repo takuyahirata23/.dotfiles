@@ -24,11 +24,6 @@ keymap('v', '<Leader>cy', '\"+y', opts)
 keymap('v', 'D', '\"_d', opts)
 
 
-
--- Show diagnostic
-keymap('n', 'K', "<CMD>lua vim.diagnostic.open_float()<CR>", opts)
-
-
 -- Format with Neoformat
 keymap('n', 'nn', "<CMD>Neoformat<CR>", opts)
 
