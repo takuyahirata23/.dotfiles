@@ -18,9 +18,11 @@ lsp.ensure_installed({
 
 lsp.setup()
 
--- Hover to show info
-vim.keymap.set('n', 'Y', vim.lsp.buf.hover, {})
+-- Show code action
 vim.keymap.set('n', 'sa', vim.lsp.buf.code_action, {})
+
+-- Show digaanostic 
+vim.keymap.set('n', 'sd', vim.diagnostic.open_float, {})
 
 local cmp = require('cmp')
 
