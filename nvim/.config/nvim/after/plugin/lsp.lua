@@ -18,6 +18,7 @@ lsp.ensure_installed({
 
 lsp.setup()
 
+
 -- Show code action
 vim.keymap.set('n', 'sa', vim.lsp.buf.code_action, {})
 
