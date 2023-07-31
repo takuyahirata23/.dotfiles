@@ -18,7 +18,7 @@
 - Navigate to ~/.dotfiles
 - Run `stow FOLDER_NAME` e.g `stow nvim`
 
-NOTE: Each folder already has ".confg" so you do not worry about how make symlinks in ./.config
+NOTE: Each folder already has ".confg" so no need to deal with nested configs like `./.config/nvim`
 
 
 
