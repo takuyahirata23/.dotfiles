@@ -7,4 +7,4 @@ vim.keymap.set('n', 'lf', builtin.buffers, {})
 vim.keymap.set('n', 'gb', builtin.git_branches, {})
 
 -- Go to definition
-vim.keymap.set('n', 'sd', builtin.lsp_definitions, {})
+vim.keymap.set('n', 'gd', builtin.lsp_definitions, {})
