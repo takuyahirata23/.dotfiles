@@ -28,7 +28,7 @@ keymap('v', 'D', '\"_d', opts)
 keymap('n', 'nn', "<CMD>Neoformat<CR>", opts)
 
 -- Go to last changed place
-keymap('n', 'gp', "`.", opts)
+keymap('n', 'lc', "`.", opts)
 
 
 
