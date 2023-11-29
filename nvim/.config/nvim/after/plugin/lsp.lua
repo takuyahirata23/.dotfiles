@@ -18,6 +18,17 @@ lsp.ensure_installed({
 
 lsp.setup()
 
+lsp.format_on_save({
+  format_opts = {
+    async = false,
+    timeout_ms = 10000,
+  },
+  servers = {
+    ['tsserver'] = {'javascript', 'typescript'},
+    ['elixirls'] = {'elixir'},
+  }
+})
+
 
 -- Show code action
 vim.keymap.set('n', 'sa', vim.lsp.buf.code_action, {})
