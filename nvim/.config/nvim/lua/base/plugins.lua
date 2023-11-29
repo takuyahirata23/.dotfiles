@@ -27,9 +27,6 @@ return require('packer').startup(function(use)
   }
 }
 
-
-
-  use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/popup.nvim'
 
   -- Spell checker
@@ -82,7 +79,8 @@ return require('packer').startup(function(use)
 
   use {
     'nvim-telescope/telescope.nvim', 
-    tag = '0.1.0',
+    tag = '0.1.4',
+    requires = { {'nvim-lua/plenary.nvim'} },
     defaults = {
       file_ignore_patterns = { "node_modules, *.lock, /public, /dist" }
     }
