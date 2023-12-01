@@ -14,11 +14,14 @@ vim.opt.undofile = true
 vim.opt.smartindent = true
 
 vim.opt.hidden = true
-vim.opt.spell = false
 vim.opt.smartcase = true
 vim.opt.incsearch = true
 
 vim.opt.scrolloff = 8
+
+-- spell check
+vim.opt.spelllang = "en_us"
+vim.opt.spell = true
 
 -- secure places for gutter so error indicators don't break layout
 vim.opt.signcolumn = "yes"
