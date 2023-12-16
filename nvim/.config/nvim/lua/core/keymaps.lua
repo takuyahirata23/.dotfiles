@@ -6,6 +6,8 @@ keymap('n', '<Leader>q', ':q<CR>', opts)
 keymap('n', '<Leader>V', ':Vex<CR>', opts)
 keymap('n', '<Leader>S', ':Sex<CR>', opts)
 keymap('n', '<Leader>ex', ':Ex<CR>', opts)
+-- keymap('n', '<leader>ff', '<cmd>lua vim.lsp.buf.format({async = true})<CR>', opts)
+-- keymap('v', '<leader>ff', '<cmd>lua vim.lsp.buf.format({async = true})<CR>', opts)
 
 
 -- Stay in the middle when jump with <C-d> and <C-u>

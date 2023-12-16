@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- This has to be set before initializing Lazy
 vim.g.mapleader = " "
+vim.g.user_emmet_leader_key="<Tab>"
 
 -- Initialize Lazy
 require("lazy").setup("plugins", opts)
