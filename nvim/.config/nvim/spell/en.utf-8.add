@@ -2,10 +2,6 @@ attrs
 ecto
 signup
 args
-args
-args
-args
-args
 signin
 autogenerate
 noreply
@@ -14,3 +10,7 @@ changeset
 Changeset
 Trackdays
 keymap
+pressable
+trackday
+timestamps
+subcard
