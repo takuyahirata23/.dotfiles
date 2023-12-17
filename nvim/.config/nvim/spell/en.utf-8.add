@@ -16,3 +16,6 @@ timestamps
 subcard
 resolvers
 Resolvers
+refetch
+pathname
+prev
