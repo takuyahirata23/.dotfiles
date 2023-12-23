@@ -1,8 +1,8 @@
 return { 
-  "oxfist/night-owl.nvim", 
-  name = "night-owl", 
+  "catppuccin/nvim", 
+  name = "catppuccin", 
   priority = 1000,
   config = function() 
-    vim.cmd("colorscheme night-owl")
+    vim.cmd("colorscheme catppuccin")
   end
 }
