@@ -25,7 +25,7 @@ return {
         "html", 
         "lua_ls",
         "jsonls", 
-        "tsserver", 
+        "ts_ls", 
         "eslint",
         "tailwindcss",
         "elixirls"
