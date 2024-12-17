@@ -11,23 +11,24 @@ return {
 
     -- Useful status updates for LSP
     -- https://github.com/j-hui/fidget.nvim
-    { 'j-hui/fidget.nvim', opts = {} },
+    { 'j-hui/fidget.nvim',                opts = {} },
 
     -- Additional lua configuration, makes nvim stuff amazing!
     -- https://github.com/folke/neodev.nvim
-    {'folke/neodev.nvim' },
+    { 'folke/neodev.nvim' },
   },
-  config = function ()
+  config = function()
     require('mason').setup()
     require('mason-lspconfig').setup({
       -- Update this list to the language servers you need installed
       ensure_installed = {
-        "html", 
+        "html",
         "lua_ls",
         "jsonls",
-        "ts_ls", 
+        "ts_ls",
         "eslint",
         "tailwindcss",
+        "lexical",
         "elixirls"
       }
     })
@@ -35,7 +36,7 @@ return {
     local lspconfig = require('lspconfig')
     local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
     local lsp_attach = function(client, bufnr)
-      -- Show digaanostic 
+      -- Show digaanostic
       vim.keymap.set('n', 'sd', vim.diagnostic.open_float, {})
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
@@ -58,7 +59,7 @@ return {
         Lua = {
           diagnostics = {
             -- Get the language server to recognize the `vim` global
-            globals = {'vim'},
+            globals = { 'vim' },
           },
         },
       },
