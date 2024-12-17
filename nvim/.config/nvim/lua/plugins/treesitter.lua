@@ -13,13 +13,14 @@ return {
       "elixir",
       "heex",
       "tsx",
-      "lua", 
-      "vim", 
+      "lua",
+      "vim",
       "vimdoc", 
       "query", 
       "sql", 
       "rust",
-      "css" 
+      "css",
+      "gitignore"
     }
   },
   config = function(_, opts)

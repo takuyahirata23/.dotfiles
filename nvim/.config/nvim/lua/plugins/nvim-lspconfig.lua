@@ -24,7 +24,7 @@ return {
       ensure_installed = {
         "html", 
         "lua_ls",
-        "jsonls", 
+        "jsonls",
         "ts_ls", 
         "eslint",
         "tailwindcss",
