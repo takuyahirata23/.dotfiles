@@ -6,9 +6,13 @@ keymap('n', '<Leader>q', ':q<CR>', opts)
 keymap('n', '<Leader>V', ':Vex<CR>', opts)
 keymap('n', '<Leader>S', ':Sex<CR>', opts)
 keymap('n', '<Leader>ex', ':Ex<CR>', opts)
--- keymap('n', '<leader>ff', '<cmd>lua vim.lsp.buf.format({async = true})<CR>', opts)
--- keymap('v', '<leader>ff', '<cmd>lua vim.lsp.buf.format({async = true})<CR>', opts)
 
+-- Quickfix
+keymap("n", "<Leader>qa", "<C-q>", opts)
+keymap("n", "<Leader>qo", "<cmd>copen<CR>", opts)
+keymap("n", "<Leader>qc", "<cmd>cclose<CR>", opts)
+keymap("n", "<Leader>qn", "<cmd>cnext<CR>", opts)
+keymap("n", "<Leader>qp", "<cmd>cprevious<CR>", opts)
 
 -- Stay in the middle when jump with <C-d> and <C-u>
 keymap('n', '<C-d>', '<C-d>zz', opts)
@@ -24,10 +28,6 @@ keymap('v', '<Leader>cy', '\"+y', opts)
 
 --Delete without yanking
 keymap('v', 'D', '\"_d', opts)
-
-
--- -- Format with Neoformat
--- keymap('n', 'nn', "<CMD>Neoformat<CR>", opts)
 
 -- Go to last changed place
 keymap('n', 'lc', "`.", opts)
