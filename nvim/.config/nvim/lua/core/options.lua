@@ -3,12 +3,12 @@ vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 
-vim.opt.nu = ture
+vim.opt.nu = true
 vim.opt.relativenumber = true
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .."/.vim/undodir"
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 vim.opt.smartindent = true
@@ -36,7 +36,7 @@ vim.g.loaded_matchparen = 1
 vim.o.completeopt = "menuone,noselect"
 
 -- Show filename in the window titlebar
-vim.opt.title = true 
+vim.opt.title = true
 
 -- Enables 24-bit RGB. This most likely enable theme
 vim.opt.termguicolors = true
@@ -46,4 +46,4 @@ vim.g.highlightedyank_highlight_duration = 100
 
 vim.g.mapleader = " "
 
-vim.g.user_emmet_leader_key="<Tab>"
+vim.g.user_emmet_leader_key = "<Tab>"
