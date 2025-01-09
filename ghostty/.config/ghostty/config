@@ -1,0 +1,5 @@
+theme = catppuccin-mocha
+font-family = Monaco 
+font-size = 14
+font-thicken = true
+
