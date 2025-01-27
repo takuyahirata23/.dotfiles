@@ -2,5 +2,5 @@ theme = catppuccin-mocha
 font-family = Monaco 
 font-size = 14
 font-thicken = true
-working-directory = inherit
+working-directory = home
 

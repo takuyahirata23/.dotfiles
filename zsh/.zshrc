@@ -138,3 +138,5 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # gigalixir
 echo "export PATH=\$PATH:$(python3 -m site --user-base)/bin" >> ~/.profile
 source ~/.profile
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
