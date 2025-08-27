@@ -28,7 +28,6 @@ return {
         "ts_ls",
         "eslint",
         "tailwindcss",
-        "lexical",
         "elixirls"
       }
     })

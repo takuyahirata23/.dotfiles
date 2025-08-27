@@ -32,5 +32,16 @@ require("lazy").setup({
   checker = { enabled = true },
 })
 
+-- Override LSP floating preview to add padding (borders + padding)
+local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+  opts = opts or {}
+  opts.border = "rounded"               -- "single", "double", "rounded", "solid", "shadow"
+  opts.max_width = opts.max_width or 80 -- optional width limit
+  opts.pad_left = 1                     -- add 1 column padding left
+  opts.pad_right = 1                    -- add 1 column padding right
+  return orig_util_open_floating_preview(contents, syntax, opts, ...)
+end
+
 require("core.options")
 require("core.keymaps")

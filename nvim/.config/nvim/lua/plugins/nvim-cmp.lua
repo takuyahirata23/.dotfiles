@@ -45,6 +45,10 @@ return {
         ["<CR>"] = cmp.mapping.confirm({ select = false }), -- confirm selection
         ['<C-i>'] = cmp.mapping.complete()
       }),
+      window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+      },
       sources = cmp.config.sources({
         { name = "nvim_lsp" }, -- lsp
         { name = "luasnip" },  -- snippets
