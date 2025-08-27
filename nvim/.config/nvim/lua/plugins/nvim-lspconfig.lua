@@ -28,30 +28,62 @@ return {
         "ts_ls",
         "eslint",
         "tailwindcss",
-        --"lexical",
+        "lexical",
         "elixirls"
       }
     })
 
-    local lspconfig = require('lspconfig')
-    local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+    -- local lspconfig = require('lspconfig')
+    -- local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+    -- local settings =
+    -- {
+    --   codeAction = {
+    --     disableRuleComment = {
+    --       enable = true,
+    --       location = "separateLine"
+    --     },
+    --     showDocumentation = {
+    --       enable = true
+    --     }
+    --   },
+    --   codeActionOnSave = {
+    --     enable = false,
+    --     mode = "all"
+    --   },
+    --   experimental = {
+    --     useFlatConfig = false
+    --   },
+    --   format = true,
+    --   nodePath = "",
+    --   onIgnoredFiles = "off",
+    --   problems = {
+    --     shortenToSingleLine = false
+    --   },
+    --   quiet = false,
+    --   rulesCustomizations = {},
+    --   run = "onType",
+    --   useESLintClass = false,
+    --   validate = "on",
+    --   workingDirectory = {
+    --     mode = "location"
+    --   }
+    -- }
 
     vim.keymap.set('n', 'sd', vim.diagnostic.open_float, {})
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
     vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, {})
 
+    -- vim.lsp.config('elixirls', {
+    --   capabilities = lsp_capabilities,
+    -- })
 
-    -- Lua LSP settings
-    lspconfig.lua_ls.setup {
-      settings = {
-        Lua = {
-          diagnostics = {
-            -- Get the language server to recognize the `vim` global
-            globals = { 'vim' },
-          },
-        },
-      },
-    }
+    -- vim.lsp.config('tailwindcss', {
+    --   capabilities = lsp_capabilities,
+    --   filetypes = { "html", "javascriptreact", "typescriptreact", "heex", "eelixir", "elixir" }
+    -- })
+
+    -- vim.lsp.enable('lua_ls')
+    -- vim.lsp.enable('elixirls')
   end
 }

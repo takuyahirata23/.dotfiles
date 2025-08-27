@@ -41,15 +41,16 @@ return {
         ["<C-n>"] = cmp.mapping.select_next_item(), -- next suggestion
         -- ["<C-b>"] = cmp.mapping.scroll_docs(-4), -- scroll backward
         -- ["<C-f>"] = cmp.mapping.scroll_docs(4), -- scroll forward
-        ["<C-e>"] = cmp.mapping.abort(), -- clear completion window
+        --["<C-e>"] = cmp.mapping.abort(),                    -- clear completion window
         ["<CR>"] = cmp.mapping.confirm({ select = false }), -- confirm selection
+        ['<C-i>'] = cmp.mapping.complete()
       }),
       sources = cmp.config.sources({
-        { name = "nvim_lsp" }, -- lsp 
-        { name = "luasnip" }, -- snippets
-        { name = "buffer" }, -- text within current buffer
-        { name = "path" }, -- file system paths
+        { name = "nvim_lsp" }, -- lsp
+        { name = "luasnip" },  -- snippets
+        { name = "buffer" },   -- text within current buffer
+        { name = "path" },     -- file system paths
       }),
     })
   end,
- }
+}
