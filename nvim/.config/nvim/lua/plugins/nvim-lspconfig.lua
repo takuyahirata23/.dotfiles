@@ -28,7 +28,7 @@ return {
         "ts_ls",
         "eslint",
         "tailwindcss",
-        "elixirls"
+        "expert"
       }
     })
 
@@ -77,12 +77,17 @@ return {
     --   capabilities = lsp_capabilities,
     -- })
 
-    -- vim.lsp.config('tailwindcss', {
-    --   capabilities = lsp_capabilities,
-    --   filetypes = { "html", "javascriptreact", "typescriptreact", "heex", "eelixir", "elixir" }
-    -- })
+    vim.lsp.config('expert', {
+      cmd = { 'expert' },
+      root_markers = { 'mix.exs', '.git' },
+      filetypes = { 'elixir', 'eelixir', 'heex' },
+    })
 
-    -- vim.lsp.enable('lua_ls')
-    -- vim.lsp.enable('elixirls')
+    vim.lsp.config('tailwindcss', {
+      filetypes = { "html", "javascriptreact", "typescriptreact", "heex", "eelixir", "elixir" },
+    })
+
+    vim.lsp.enable 'expert'
+    vim.lsp.enable 'tailwindcss'
   end
 }
