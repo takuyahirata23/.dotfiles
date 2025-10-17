@@ -10,12 +10,12 @@ return {
   config = function()
     local neogit = require("neogit")
     neogit.setup({
-      kind = "floating", -- open in floating window
+      mappings = {
+        commit_editor = {
+          ["<c-g>"] = "Submit",
+        }
+      }
     })
-
-    -- Keymap: 'gs' to open Neogit
-    vim.keymap.set("n", "gs", function()
-      neogit.open()
-    end, { desc = "Open Neogit (floating)" })
-  end,
+    vim.keymap.set("n", "gs", neogit.open, {})
+  end
 }
