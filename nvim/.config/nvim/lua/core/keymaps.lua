@@ -31,3 +31,13 @@ keymap('v', 'D', '\"_d', opts)
 
 -- Go to last changed place
 keymap('n', 'lc', "`.", opts)
+
+vim.keymap.set("v", "<Leader>i", function()
+  local user_arg = vim.fn.input("CodeCompanion command: ")
+  if user_arg == "" then return end
+
+  -- Run CodeCompanion with the argument
+  vim.cmd('CodeCompanion ' .. user_arg)
+end)
+
+keymap('v', '<Leader>m', 'ygv<Plug>Commentary`>p', { silent = true })
