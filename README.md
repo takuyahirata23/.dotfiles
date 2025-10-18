@@ -14,6 +14,8 @@
 - `brew install neovim`
 - `brew install tmux`
 - `brew install stow`
+- `brew install fd`
+fd is to replace the default `find` command with a more user-friendly version.
 
 ### How to make symlinks
 

@@ -19,7 +19,7 @@ return {
     end)
     vim.keymap.set('n', '<C-p>', builtin.git_files, {})
     vim.keymap.set('n', '<C-g>', builtin.live_grep, {})
-    vim.keymap.set('n', 'rf', function()
+    vim.keymap.set('n', '<C-b>', function()
       require('telescope.builtin').buffers({
         ignore_current_buffer = true,
         sort_lastused = true,
