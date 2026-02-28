@@ -40,4 +40,5 @@ vim.keymap.set("v", "<Leader>i", function()
   vim.cmd('CodeCompanion ' .. user_arg)
 end)
 
+-- Duplicate and comment selection in visual mode
 keymap('v', '<Leader>m', 'ygv<Plug>Commentary`>p', { silent = true })

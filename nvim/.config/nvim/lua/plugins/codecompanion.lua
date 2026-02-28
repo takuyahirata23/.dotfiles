@@ -10,7 +10,7 @@ return {
         -- name = "copilot",
         -- model = "gpt-4.1",
         name = "copilot",
-        model = "gpt-5",
+        model = "claude-sonnet-4.5",
         keymaps = {
           send = {
             modes = { n = "<Leader>s" },
@@ -25,7 +25,7 @@ return {
       },
       inline = {
         adapter = "copilot",
-        model = "gpt-5"
+        model = "claude-sonnet-4.5",
       },
     },
     -- NOTE: The log_level is in `opts.opts`
