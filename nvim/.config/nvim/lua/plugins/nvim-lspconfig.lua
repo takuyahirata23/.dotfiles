@@ -28,7 +28,8 @@ return {
         "ts_ls",
         "eslint",
         "tailwindcss",
-        "expert"
+        "expert",
+        "sqls"
       }
     })
 
@@ -85,6 +86,11 @@ return {
 
     vim.lsp.config('tailwindcss', {
       filetypes = { "html", "javascriptreact", "typescriptreact", "heex", "eelixir", "elixir" },
+      experimental = {
+        classRegex = {
+          { "(`.*?`)", "(\".*?\")", "('.*?')" }
+        },
+      },
     })
 
     vim.lsp.enable 'expert'
