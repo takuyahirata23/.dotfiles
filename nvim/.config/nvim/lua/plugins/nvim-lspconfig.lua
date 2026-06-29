@@ -78,11 +78,11 @@ return {
     --   capabilities = lsp_capabilities,
     -- })
 
-    vim.lsp.config('expert', {
-      cmd = { 'expert' },
-      root_markers = { 'mix.exs', '.git' },
-      filetypes = { 'elixir', 'eelixir', 'heex' },
-    })
+    -- vim.lsp.config('expert', {
+    --   cmd = { 'expert' },
+    --   root_markers = { 'mix.exs', '.git' },
+    --   filetypes = { 'elixir', 'eelixir', 'heex' },
+    -- })
 
     vim.lsp.config('tailwindcss', {
       filetypes = { "html", "javascriptreact", "typescriptreact", "heex", "eelixir", "elixir" },

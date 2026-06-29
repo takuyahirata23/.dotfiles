@@ -140,3 +140,5 @@ echo "export PATH=\$PATH:$(python3 -m site --user-base)/bin" >> ~/.profile
 source ~/.profile
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+alias nvim11="~/nvim-macos-x86_64/bin/nvim"

@@ -8,7 +8,6 @@ return {
     strategies = {
       chat = {
         name = "copilot",
-        model = "claude-opus-4.6",
         keymaps = {
           send = {
             modes = { n = "<Leader>s" },
@@ -23,7 +22,6 @@ return {
       },
       inline = {
         adapter = "copilot",
-        model = "claude-opus-4.6",
       },
     },
     -- NOTE: The log_level is in `opts.opts`

@@ -4,6 +4,7 @@ return {
   opts = {
     highlight = {
       enable = true,
+      disable = { "markdown", "markdown_inline" },
     },
     indent = { enable = ture },
     auto_install = true,
@@ -15,9 +16,9 @@ return {
       "tsx",
       "lua",
       "vim",
-      "vimdoc", 
-      "query", 
-      "sql", 
+      "vimdoc",
+      "query",
+      "sql",
       "rust",
       "css",
       "gitignore"
