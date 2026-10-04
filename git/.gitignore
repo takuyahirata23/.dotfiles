@@ -11,3 +11,5 @@ coverage/
 private/
 data/
 
+
+**/.claude/settings.local.json

@@ -1,0 +1,33 @@
+2026-08-31T16:18:33.815657Z  INFO herdr::platform::macos: raised server file descriptor soft limit previous=256 target=8192
+2026-08-31T16:18:33.816195Z  INFO herdr::api::server: api server listening path=/Users/takuyahirata/.config/herdr/herdr.sock
+2026-08-31T16:18:33.816638Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-08-31T16:18:33.858814Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-08-31T16:18:33.863236Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=40 cols=120 scrollback_limit_bytes=10000000
+2026-08-31T16:18:33.865467Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=28436
+2026-08-31T16:18:33.865750Z  INFO herdr::logging: workspace created event="workspace.create" subsystem="workspace" outcome="ok" workspace_id="w1" pane_id=1
+2026-08-31T16:18:33.865758Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w1"
+2026-08-31T16:18:33.865765Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-31T16:18:33.865771Z  INFO herdr::server::headless: created startup workspace cwd=/Users/takuyahirata
+2026-08-31T16:18:33.865879Z  INFO herdr::server::headless: client protocol socket listening path=/Users/takuyahirata/.config/herdr/herdr-client.sock
+2026-08-31T16:18:33.865894Z  INFO herdr::server::headless: herdr server started api_socket=/Users/takuyahirata/.config/herdr/herdr.sock client_socket=/Users/takuyahirata/.config/herdr/herdr-client.sock
+2026-08-31T16:18:33.866125Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=28403
+2026-08-31T16:18:34.118858Z  INFO herdr::server::headless: client connected client_id=2 cols=215 rows=59 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-31T16:18:38.869003Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/takuyahirata/.config/herdr/session.json workspaces=1
+2026-08-31T16:19:39.509984Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=2 rows=58 cols=189 scrollback_limit_bytes=10000000
+2026-08-31T16:19:39.516304Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=2 pid=28673
+2026-08-31T16:19:39.516688Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-31T16:19:39.516751Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-31T16:19:44.520552Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/takuyahirata/.config/herdr/session.json workspaces=1
+2026-08-31T16:19:54.009960Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-31T16:19:59.012820Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/takuyahirata/.config/herdr/session.json workspaces=1
+2026-08-31T16:20:18.351897Z  INFO herdr::logging: workspace renamed event="workspace.rename" subsystem="workspace" outcome="ok" workspace_id="w1"
+2026-08-31T16:20:23.353626Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/takuyahirata/.config/herdr/session.json workspaces=1
+2026-08-31T16:20:25.218139Z  INFO herdr::server::headless: server shutdown initiated
+2026-08-31T16:20:25.273215Z  INFO herdr::server::headless: completing server shutdown
+2026-08-31T16:20:25.329245Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/takuyahirata/.config/herdr/session.json workspaces=1
+2026-08-31T16:20:25.329263Z  INFO herdr::server::headless: headless server exiting
+2026-08-31T16:20:25.330587Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=2 status="ExitStatus { code: 1, signal: None }"
+2026-08-31T16:20:25.354745Z  INFO herdr::pane: pane session terminated pane=2 pid=28673 signal=Hangup
+2026-08-31T16:20:25.357147Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=1 status="ExitStatus { code: 1, signal: None }"
+2026-08-31T16:20:25.378079Z  INFO herdr::pane: pane session terminated pane=1 pid=28436 signal=Hangup
+2026-08-31T16:20:25.379328Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="server" outcome="completed" pid=28403
